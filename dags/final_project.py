@@ -62,7 +62,7 @@ def final_project():
         sql_load_statement = queries.user_table_insert,
         sql_create_statement = queries.create_users,
         table_name="public.users",
-        truncate=True,
+        truncate=Variable.get("TRUNCATE"),
     )
 
     load_song_dimension_table = LoadDimensionOperator(
@@ -70,7 +70,7 @@ def final_project():
         sql_load_statement = queries.song_table_insert,
         sql_create_statement = queries.create_songs,
         table_name="public.songs",
-        truncate=True,
+        truncate=Variable.get("TRUNCATE"),
     )
 
     load_artist_dimension_table = LoadDimensionOperator(

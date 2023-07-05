@@ -22,7 +22,7 @@ class LoadFactOperator(BaseOperator):
                  sql_load_statement = "", 
                  sql_create_statement = "",
                  table_name = "",
-                 truncate=True,
+                 truncate=False, # Because fact tables are large, we usually don't want to truncate 
                  *args, **kwargs):
 
         super(LoadFactOperator, self).__init__(*args, **kwargs)

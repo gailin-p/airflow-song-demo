@@ -10,3 +10,5 @@ The Airflow DAG `final_project` does the following:
 The DAG uses operators to hold shared logic for Redshift operations. 
 
 The DAG uses Variables and Connections to store S3 locations and permissions. 
+
+The DAG uses the `TRUNCATE` variable to determine whether tables should be emptied and re-created before load. 
